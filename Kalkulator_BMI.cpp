@@ -11,11 +11,11 @@ void warga_nanya(){
     cout << "masukan tinggi badan (meter): ";
     cin >> tinggi_badan;
 }
-//kalkulasi bmi
+//fungsi kalkulasi bmi
 float BMI(float m, float kg){
     return kg / (m * m);
 }
-//cek status BMI
+//fungsi cek status BMI
 string cek_berat(){
     if(BMI(tinggi_badan, berat_badan) < 18.5){
         return "Berat badan kurang";
@@ -28,7 +28,9 @@ string cek_berat(){
     }
     return 0;
 }
-
 int main (){
-    
+    warga_nanya();
+    cout << endl << "--- Hasil --" << endl;
+    cout << "BMI Anda : " << BMI(tinggi_badan, berat_badan) << endl;
+    cout << "Status : " << cek_berat() << endl;
 }
