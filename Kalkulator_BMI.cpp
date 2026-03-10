@@ -5,16 +5,28 @@ float berat_badan, tinggi_badan;
 
 //bagian awal
 void warga_nanya(){
-    cout << "Masukkan berat badan: ";
+    cout << "--- Selamat Datang Mahasiswa Kelas A 2025 ---" << endl;
+    cout << "Masukkan berat badan (kg): ";
     cin >> berat_badan;
-    cout << "masukan tinggi badan (cm): ";
+    cout << "masukan tinggi badan (meter): ";
     cin >> tinggi_badan;
-    tinggi_badan = tinggi_badan / 100;
 }
-
 //kalkulasi bmi
 float BMI(float m, float kg){
     return kg / (m * m);
+}
+//cek status BMI
+string cek_berat(){
+    if(BMI(tinggi_badan, berat_badan) < 18.5){
+        return "Berat badan kurang";
+    }  else if (BMI(tinggi_badan, berat_badan) < 25){
+        return "Berat badan normal";
+    }  else if (BMI(tinggi_badan, berat_badan) < 30){
+        return "Berat badan kelebihan";
+    }  else {
+        return "Obesitas";
+    }
+    return 0;
 }
 
 int main (){
