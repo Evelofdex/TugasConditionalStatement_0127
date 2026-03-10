@@ -1,8 +1,7 @@
 #include <iostream>
 using namespace std;
-
+//variable
 float berat_badan, tinggi_badan;
-
 //bagian awal
 void warga_nanya(){
     cout << "--- Selamat Datang Mahasiswa Kelas A 2025 ---" << endl;
