@@ -12,6 +12,11 @@ void warga_nanya(){
     tinggi_badan = tinggi_badan / 100;
 }
 
+//kalkulasi bmi
+float BMI(float m, float kg){
+    return kg / (m * m);
+}
+
 int main (){
     
 }
